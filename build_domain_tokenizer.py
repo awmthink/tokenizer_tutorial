@@ -15,12 +15,14 @@ import sentencepiece as spm
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--in_file", default="../data/pretrain.txt", type=str)
-    parser.add_argument("--domain_sp_model_name", default="medical_sp", type=str)
+    parser.add_argument("--domain_sp_model_name", default="domain_sp", type=str)
     parser.add_argument("--max_sentence_length", default=16384, type=int)
     parser.add_argument("--pad_id", default=3, type=int)
     parser.add_argument("--vocab_size", default=10000, type=int)
     parser.add_argument("--model_type", default="BPE", type=str)
-    parser.add_argument("--input_sentence_size", default=1000000, type=int)
+    parser.add_argument(
+        "--input_sentence_size", default=1000000, type=int, help="用于训练分词器的句子的数量"
+    )
 
     args = parser.parse_args()
     print(args)

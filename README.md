@@ -1,5 +1,9 @@
 # Tokenizer
 
+关于Tokenizer系统性介绍的文档：https://zazt7evze69.feishu.cn/wiki/Syr6wQFRIilZfJkQqu6cIw2Inmb
+
+本教程中相关notebook和代码的功能说明：
+
 * [basic_usage.ipynb](./basic_usage.ipynb): 介绍了transformers中tokenizer模块的基本的用法
 * [tokenizers_lib.ipynb](./tokenizers_lib.ipynb): 介绍了HuggingFace的tokenizers库的用法，包括了它的Normalizer, Pre-Tokenizer，Models，Postprocessor，Trainers等。
 * [bpe.py](./bpe.py): BPE算法的玩具级别的实现，演示了BPE算法训练与分词的原理。

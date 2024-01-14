@@ -1,5 +1,5 @@
 # %%
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, convert_slow_tokenizer, LlamaTokenizerFast
 
 corpus = [
     "This is the Hugging Face Course.",
@@ -40,7 +40,6 @@ alphabet.sort()
 vocab = ["<|endoftext|>"] + alphabet.copy()
 
 # %%
-
 # splits保存了当前每个word在当前词汇表下拆分的subword
 splits = {word: [c for c in word] for word in word_freqs.keys()}
 
