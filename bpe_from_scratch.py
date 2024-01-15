@@ -1,5 +1,5 @@
 # %%
-from transformers import AutoTokenizer, convert_slow_tokenizer, LlamaTokenizerFast
+from transformers import AutoTokenizer
 
 corpus = [
     "This is the Hugging Face Course.",

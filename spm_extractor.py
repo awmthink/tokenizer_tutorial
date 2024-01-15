@@ -29,7 +29,7 @@ class SentencePieceExtractor:
         sp = self.sp
         vocab = {sp.id_to_piece(index): index for index in trange(sp.GetPieceSize())}
 
-        # Merges
+        # Merges, 查找所有可能的merges，然后按 piece进行从小到大排序
         merges = []
         for piece_l in tqdm(vocab.keys(), total=sp.GetPieceSize()):
             for piece_r in vocab.keys():
